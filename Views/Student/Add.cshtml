@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Add Student";
+}
+@model EfCore.Models.Student
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <form method="post">
+        <input type="text" asp-for="FirstName">
+        <input type="text" asp-for="LastName">
+        <input type="number" asp-for="Age">
+        <input type="submit" value="submit">
+    </form>
+</div>

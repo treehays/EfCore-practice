@@ -1,0 +1,17 @@
+@model List<EfCore.Models.Student>
+
+<p>Students</p>
+@foreach (var student in Model)
+{
+    <div class="" style="display: flex; gap: 10px">
+        <p>@student.FirstName</p>
+        <p>@student.LastName</p>
+        <p>@student.Age</p>
+        <a asp-action="Get" asp-route-id="@student.Id" class="btn btn-info">View</a>
+        <a asp-action="Update" asp-route-id="@student.Id" class="btn btn-primary">Update</a>
+        <a asp-action="Delete" asp-route-id="@student.Id" class="btn btn-danger">Delete</a>
+
+    </div>
+}
+
+<a href="/Student/Add">Add student</a>
